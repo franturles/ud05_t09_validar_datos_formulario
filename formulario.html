@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UD05_T09_Verificar_datos_Formulario</title>
+        <meta charset="UTF-8">    
+        <h1>UD05_T09</h1>
+    </head>
+    <body>
+        <form action="axente_rexistro.php" enctype="multipart/form-data" method="post">
+            <p>Nome completo: <input type="text" name="nomecompleto"/></p>
+            <p>Nome de usuario: <input type="text" name="nomeUsr"/></p>
+            <p>Contrasinal: <input type="password" name="contrasinal" minlength="6"></p>
+            <p>Idade: <input type="text" name="idade"></p>
+            <p>Data de nacemento: <input type="text" name="dNac"/><em>dd/mm/aaaa</em></em></p>
+            <p>Email:<input type="text" name="email"></p>
+            <p>URL da paxina personal:<input type="text" name="url"/></p>
+            <p>IP do equipo:<input type="text" name="ip"/></p>
+            <p>Descricion dos hobbies<textarea rows="4" cols="20" name="hobbies"></textarea></p>
+            <p>Home <input type="radio" name="sexo" value="home"/>
+            Muller <input type="radio" name="sexo" value="muller"></p>
+            <p>Linguas estranxeiras:<select name="LinguasEs[]" size="5" multiple="multiple">
+                <option selected="selected">Ingles</option>
+                <option>Portugues</option>
+                <option>Frances</option>
+                <option>Italiano</option>
+                <option>Aleman</option>
+            </select></p>
+            <p>Curriculo: <input type="file" name="curriculo"/></p>
+            <p><input type="submit" value="Submit"/></p>
+        </form>
+    </body>
+</html>
