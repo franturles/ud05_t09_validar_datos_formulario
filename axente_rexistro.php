@@ -26,11 +26,11 @@ if (strlen($contrasinal) < "6") {
 else
     print "<p>O valor recibido do campo contrasinal é: $contrasinal</p>";
 
-$idade= htmlspecialchars(trim(strip_tags($_REQUEST['idade'])),ENT_QUOTES, "ISO-8859-1");
+$idade= htmlspecialchars(trim(strip_tags($_REQUEST['idade'])),ENT_QUOTES, "ISO-8859-1",FILTER_VALIDATE_INT);
 if ($idade == "")
     print "<p>O campo nome completo esta baleiro</p>";
 else
-if ($idade > "130" or $idade < "0"){
+if ($idade < 0 || $idade > 130 && filter_var($idade, FILTER_VALIDATE_INT)){
     print "<p>La edad tiene que estar entre 0 y 130</p>";
 }
 else
